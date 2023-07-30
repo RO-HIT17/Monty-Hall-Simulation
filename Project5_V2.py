@@ -1,7 +1,7 @@
 import random
 def wins_without_switching(simulations):
     without_switching=0
-    for a in range(simulations):    
+    for _ in range(simulations):    
         doors=["goat","goat","car"]
         random.shuffle(doors)
         choice=random.choice(doors)
@@ -10,7 +10,7 @@ def wins_without_switching(simulations):
     return without_switching
 def wins_with_switching(simulations):
     with_switching=0
-    for a in range(simulations):    
+    for _ in range(simulations):    
         doors=["goat","goat","car"]
         random.shuffle(doors)
         choice=random.choice(doors)             
@@ -31,7 +31,7 @@ count_wins_with_switching=wins_with_switching(simlations)
 print("Total Simulations:",simlations)
 print("Count of wins without switching:",count_wins_without_switching)
 print("Count of wins without switching:",count_wins_with_switching)
-print("Probability of wins without switching:",count_wins_without_switching/simlations)
-print("Probability of wins without switching:",count_wins_with_switching/simlations)
+print("Probability of wins without switching:",round(count_wins_without_switching/simlations,4))
+print("Probability of wins without switching:",round(count_wins_with_switching/simlations,4))
 print("Percentage of wins without switching:",round((count_wins_without_switching/simlations)*100,0),"%")
 print("Percentage of wins without switching:",round((count_wins_with_switching/simlations)*100,0),"%")
